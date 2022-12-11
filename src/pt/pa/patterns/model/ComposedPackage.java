@@ -35,7 +35,7 @@ public class ComposedPackage extends Package {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append(String.format("%s\n"));
+        sb.append(String.format("%s\n", getDescription()));
 
         for (Package p : packageList) {
             sb.append(String.format("\t%s\n", p.getDescription()));
