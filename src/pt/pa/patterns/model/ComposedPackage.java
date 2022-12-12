@@ -11,14 +11,14 @@ public class ComposedPackage extends Package {
 
     private List<Package> packageList;
 
-    public ComposedPackage(String code, int freeMonths) {
-        super(code, freeMonths);
+    public ComposedPackage(String description, int freeMonths) {
+        super(description, freeMonths);
 
         packageList = new LinkedList<>();
     }
 
     public ComposedPackage(String description, int freeMonths, Package... packages) {
-        this(code, freeMonths);
+        this(description, freeMonths);
 
         for (Package p : packages) {
             add(p);
