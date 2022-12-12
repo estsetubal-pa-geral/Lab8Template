@@ -17,7 +17,7 @@ public class ComposedPackage extends Package {
         packageList = new LinkedList<>();
     }
 
-    public ComposedPackage(String code, int freeMonths, Package... packages) {
+    public ComposedPackage(String description, int freeMonths, Package... packages) {
         this(code, freeMonths);
 
         for (Package p : packages) {
@@ -38,7 +38,7 @@ public class ComposedPackage extends Package {
         sb.append(String.format("%s\n", getDescription()));
 
         for (Package p : packageList) {
-            sb.append(String.format("\t%s\n", p.getDescription()));
+            sb.append(String.format("\t%s\n", p));
         }
 
         return sb.toString();
