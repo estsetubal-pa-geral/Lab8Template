@@ -20,7 +20,7 @@ public class ComposedPackage extends Package {
     public ComposedPackage(String code, int freeMonths, Package... packages) {
         this(code, freeMonths);
 
-        for (Package p : packageList) {
+        for (Package p : packages) {
             add(p);
         }
     }
